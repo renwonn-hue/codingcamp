@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="dashboard-container">
+        
+        <button id="theme-toggle" class="btn-theme">🌙 Mode Gelap</button>
+
+        <header class="card header-card">
+            <h1 id="time-display">00:00:00</h1>
+            <p id="date-display">Day, Month 00, 0000</p>
+            <h2 class="greeting">
+                <span id="greeting-text">Good Morning</span> 
+                <span id="user-name" contenteditable="true" spellcheck="false" title="Klik untuk mengubah nama">User</span>
+            </h2>
+        </header>
+
+        <div class="main-grid">
+            
+            <div class="left-column">
+                
+                <section class="card timer-card">
+                    <h3>Focus Timer</h3>
+                    <div id="timer-display" class="timer-text">25:00</div>
+                    <div class="timer-controls">
+                        <button id="btn-start" class="btn btn-primary">Start</button>
+                        <button id="btn-stop" class="btn btn-secondary">Stop</button>
+                        <button id="btn-reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </section>
+
+                <section class="card links-card">
+                    <h3>Quick Links</h3>
+                    <form id="link-form" class="input-group">
+                        <input type="text" id="link-name" placeholder="Link name" required>
+                        <input type="url" id="link-url" placeholder="URL" required>
+                        <button type="submit" class="btn btn-primary">Add Link</button>
+                    </form>
+                    
+                    <nav id="links-container" class="links-container">
+                        </nav>
+                </section>
+                
+            </div>
+
+            <div class="right-column">
+                
+                <section class="card tasks-card">
+                    <h3>Tasks</h3>
+                    <form id="task-form" class="input-group">
+                        <input type="text" id="task-input" placeholder="Add a new task..." required>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                    
+                    <ul id="task-list" class="task-list">
+                        </ul>
+                    <p class="edit-hint">*Klik teks tugas untuk mengedit</p>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
